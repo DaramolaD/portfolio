@@ -1,0 +1,25 @@
+/*-----------------------------------*\
+  #btn.css
+\*-----------------------------------*/
+
+/**
+ * copyright 2022 daniel.d
+*/
+
+.btn {
+  font-size: var(--fs-14);
+  font-weight: var(--fw-600);
+  letter-spacing: 2px;
+  padding: 10px 22px;
+  border-radius: 1rem;
+  transition: var(--transition-1);
+  text-transform: uppercase;
+  max-width: max-content;
+  background-color: #64F4AC;
+  color: #2d2e32;
+}
+.btn:hover {
+  color: #64F4AC;
+  background-color: #2d2e32;
+  box-shadow: 1px 1px 20px 0px #64F4AC;
+}

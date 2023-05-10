@@ -1,0 +1,111 @@
+/*-----------------------------------*\
+  #service.css
+\*-----------------------------------*/
+ 
+/**
+ * TABLE OF CONTENT
+ *
+ * COMPONENTS
+ * Btn............................Buttons style
+ *
+ * MAIN CONTENT
+ * Portfolio......................Portfolio style
+ * Media queries..................Responsive for all devices
+ */
+
+
+
+
+
+/*-----------------------------------*\
+  #COMPONENTS
+\*-----------------------------------*/
+
+@import url("./components/btn.css");
+
+
+
+/*-----------------------------------*\
+  #PORTFOLIO
+\*-----------------------------------*/
+
+.portfolio {
+  background-color: var(--bg-1);
+  padding-block-start: calc(var(--section-padding) + 60px);
+}
+.headline-end { color: var(--blue); }
+.portfolio-list { 
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.portfolio-list { gap: 58px; }
+
+.portfolio-card { gap: 25px; }
+
+.portfolio-card .card-banner {
+  position: relative;
+  border: 2px solid black;
+  box-shadow: 0 0 0 var(--blue);
+  transition: var(--transition-1);
+}
+
+.portfolio-card .card-banner:is(:hover, :focus-visible) {
+  box-shadow: 0px 0px 5px var(--blue);
+  border: none;
+}
+
+.portfolio-card .btn-icon {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  background-color: #25262A;
+  font-size: 2rem;
+  padding: 8px;
+  border: 2px solid var(--blue);
+  opacity: 0;
+  transition: var(--transition-1);
+  will-change: transform;
+}
+.portfolio-card .btn-icon img {
+  filter: invert(70%) sepia(86%) saturate(570.8%) hue-rotate(91deg) brightness(100.8%) contrast(87.3%);
+  width: 25px;
+}
+
+.portfolio-card .card-banner:is(:hover, :focus-visible) .btn-icon {
+  transform: translateX(15px);
+  opacity: 1;
+}
+.portfolio-card .card-text { margin-block: 10px 25px; }
+.card-content {margin-block-start: 50px;}
+
+
+/*-----------------------------------*\
+  #MEDIA QUERIES
+\*-----------------------------------*/
+
+/* 
+  *responsive for screen larger than 768px screen
+*/
+
+@media (min-width: 768px) {
+
+  .portfolio-card {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .portfolio-list > li:nth-child(2n) .card-banner {
+    order: 1;
+  }
+
+  .portfolio-card > * {
+    width: 80%;
+    margin-inline: auto;
+  }
+
+  .portfolio-card .card-text { margin-block-start: 20px; }
+}
+@media (min-width: 600px){
+  .portfolio-list {grid-template-columns: 1fr 1fr;}
+}
