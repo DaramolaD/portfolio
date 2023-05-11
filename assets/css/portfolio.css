@@ -79,6 +79,12 @@
 .portfolio-card .card-text { margin-block: 10px 25px; }
 .card-content {margin-block-start: 50px;}
 
+.tech {
+  font-weight: bold;
+  font-style: italic;
+  padding-block-end: 20px;
+  color: #9997c0;
+}
 
 /*-----------------------------------*\
   #MEDIA QUERIES
