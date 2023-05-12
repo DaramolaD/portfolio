@@ -79,6 +79,14 @@
 .portfolio-card .card-text { margin-block: 10px 25px; }
 .card-content {margin-block-start: 50px;}
 
+.tech_feat {margin-bottom: 60px;}
+.tech_feat span {
+  margin-top: 15px;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: normal;
+  font-weight: lighter;
+}
 .tech {
   font-weight: bold;
   font-style: italic;
